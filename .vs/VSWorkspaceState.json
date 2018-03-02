@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\e2e",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\additem",
+    "\\src\\app\\components\\navbar",
+    "\\src\\app\\services",
+    "\\src\\app\\services\\todo-service",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\src\\app\\services\\todo-service",
+  "PreviewInSolutionExplorer": false
+}

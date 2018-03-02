@@ -1,0 +1,27 @@
+<div class="container">
+
+<form class="form-group">
+  <div class="row">
+      <div class="col-sm-4">
+          <input type="text" [(ngModel)]="itemName" name="itemName" class="form-control" ngModel  placeholder="Add a todo.."/>
+      </div>
+
+     
+     <app-date-picker></app-date-picker>
+
+      <div class="col-sm-2">
+          <i class="fa fa-plus-circle size-big text-primary" (click)="addItem()"></i>
+      </div>
+
+      <div class="col-sm-2">
+          <i class="fa fa-plus-circle size-big text-primary" (click)="addItem()"></i>
+      </div>
+
+      <div class="col-sm-2">
+          <i class="fa fa-remove size-big text-danger" (click)="clearText()"></i>
+      </div>
+   </div>
+
+</form>
+
+</div>
