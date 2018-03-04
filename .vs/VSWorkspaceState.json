@@ -4,13 +4,14 @@
     "\\e2e",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\components",
     "\\src\\app\\components\\additem",
-    "\\src\\app\\components\\navbar",
+    "\\src\\app\\components\\date-picker",
+    "\\src\\app\\components\\showitem",
+    "\\src\\app\\models",
     "\\src\\app\\services",
     "\\src\\app\\services\\todo-service",
-    "\\src\\environments"
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\services\\todo-service",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
