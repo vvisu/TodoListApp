@@ -1,23 +1,33 @@
+<div class="row">
+  <div class="col-sm-6">
+    <button class="btn btn-warning" (click)="getListOfTodos()">
+      {{action}} All Todos</button>
+  </div>
 
-<button class="btn btn-warning" (click)="getListOfTodos()">
-{{action}} All Todos</button>
-<ul *ngIf = "isExpanded" class="list-group">
+  <div class="col-sm-6">
 
-<li class="list-group-item" *ngFor= "let todo of todos">
-<div class="container">
-  <div class="row">
-      <div class="col-sm-8 col-md-6 col-lg-7 mb-4">
+    <h3>
+      <i (click)="showIncTodos()" class="fa fa-refresh">Refresh</i>
+    </h3>
+  </div>
+
+</div>
+<ul *ngIf="isExpanded" class="list-group">
+
+  <li class="list-group-item" *ngFor="let todo of todos">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-6 col-lg-7 mb-4">
           <h3 class="text-primary">{{todo.title}}</h3>
           <h4>{{todo.date}}</h4>
+        </div>
+        <div class="col-sm-4 col-md-6 col-lg-5 mb-4 ">
+          <i class="fa fa-pencil size-big"></i>
+          <i [ngClass]="showCheckCircle(todo)" (click)="markComplete(todo)"></i>
+          <i class="fa fa-remove   size-big text-danger" (click)="deleteTodo(todo)"></i>
+        </div>
       </div>
-      <div class="col-sm-4 col-md-6 col-lg-5 mb-4 ">
-      <i class="fa fa-pencil size-big"></i>
-      <i [ngClass]="showCheckCircle(todo)"  (click)="markComplete(todo)"></i>
-      <i class="fa fa-remove   size-big text-danger"
-      (click)="deleteTodo(todo)"></i>
+
     </div>
-  </div>
- 
-</div>
-</li>
+  </li>
 </ul>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Todo} from '../../models/todo';
+import {Todo} from '../../models/Todo';
 import {ItemService} from '../../services/todo-service/item.service';
 
 @Component({
@@ -24,6 +24,18 @@ export class ShowitemComponent implements OnInit {
 
   
 
+  showIncTodos(){
+    for ( const t of this.todos)
+    {
+      console.log(t.title +"****" +t.id);
+      if(t.status === 'Complete')
+      {
+        console.log(t.title);
+        this.todos.splice(t.id);
+      }
+    }
+    return this.todos;
+  }
   getListOfTodos()
   {
     this.isExpanded = !(this.isExpanded);
@@ -59,7 +71,8 @@ export class ShowitemComponent implements OnInit {
       else{
         todo.status = 'Complete';
       }
-     
+      console.log("hello"+todo.id);
+     this.itemService.updateTodo(todo);
     }
     
 }
